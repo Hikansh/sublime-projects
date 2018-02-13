@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyframes</title>
+
+	<style type="text/css">
+		
+	.sky{
+		background-color: lightblue;
+		width: 100%;
+		height:300px;
+	}
+	.grass{
+		background-color: darkgreen;
+		width: 100%;
+		height: 180px;
+	}
+	.road{
+		background-color: gray;
+		width: 100%;
+		height: 200px;
+		margin-top: -30px;
+		//text-align: center;
+		color: white;
+	}
+
+	.lines{
+		width: 100%;
+		border: 2px dashed white;
+		position: absolute;
+		margin-top: 100px;
+	}
+
+	img{
+		height: 60px;
+		padding:10px 0;
+		margin: 0;
+	}
+
+	.stop{
+		padding-left: 1410px;
+		position: absolute;
+		animation-name: pause;
+		animation-delay: 0.5s;
+		animation-duration: 2.5s;
+	}
+
+	.bike{
+	position: absolute;
+	animation-name: drive;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	}
+    .bike2{
+    padding-top: 120px;	
+	position: absolute;
+	animation-name: drive2;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	}
+
+
+	@keyframes drive{
+		from{transform: translateX(0px); }
+		to{transform: translateX(1300px);}
+	}
+	@keyframes drive2{
+		from{transform: translateX(0px); }
+		to{transform: translateX(1400px);}
+	}
+
+	@keyframes pause{
+		from{transform: scaleY(0.2);}
+		to{transform: scaleY(1.5);}
+	}
+	</style>
+</head>
+<body>
+
+<div class="sky"></div>
+<div class="grass"></div>
+<div class="road">
+	<img src="images/bike.png" class="bike">
+	<img src="images/stop.png" class="stop">
+	<div class="lines"></div>
+	<img src="images/bike.png" class="bike2">
+</div>
+
+</body>
+</html>

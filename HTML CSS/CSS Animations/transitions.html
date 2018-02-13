@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+<style type="text/css">
+	
+	.circle{
+		width: 100px;
+		border-radius: 50px;
+		background-color:pink;
+		line-height: 0;
+		padding: 50px 0;
+		margin: 60px auto;
+		text-align: center;
+		color: white;
+		transition: 1s;    //this means that all the effects applied to this div will take 1s to apply
+		/*transition:background-color 1s, transform 2s     this way we can specify diff time delays for different effects*/
+	}
+
+	.circle:hover{
+		background-color: salmon;
+		transform: rotate(360deg);
+	}
+
+	.button{
+		margin: 40px auto;
+		padding: 5px 0;
+		border-radius: 5px;
+		background-color: lightblue;
+		margin-left: 340px;
+
+		transition: 2s;
+	}
+
+	.button:hover{
+	//	transform: rotate(360deg);
+		transform: scale(1.5);   //1.5 times_the_size
+	}
+
+</style>
+</head>
+<body>
+
+<div class="circle">
+	Hover Me
+</div>
+
+<button class="button">Hover Me</button>
+
+</body>
+</html>
