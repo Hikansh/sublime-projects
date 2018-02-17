@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms and Inputs</title>
+	<style type="text/css">
+		.hide{
+			display: none;
+		}
+		img{
+			max-width: 300px;
+			max-height: 300px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Add Two Numbers</h1>
+<p>
+	<input type="text" id="numone"> + <input type="text" id="numtwo">
+</p>
+<p id="p1"></p>
+<br><br>
+<h1>Pictures :-</h1>
+<ul>
+	<li><a href="#" id="comp1" data-img="comp1-pic">Pic 1</a></li>
+	<li><a href="#" id="comp2" data-img="comp2-pic">Pic 2</a></li>
+	<li><a href="#" id="comp3" data-img="comp3-pic">Pic 3</a></li>
+</ul>
+
+	<img src="../images/comp1.jpg" class="hide" id="comp1-pic">
+	<img src="../images/comp2.jpg" class="hide" id="comp2-pic">
+	<img src="../images/comp3.jpg" class="hide" id="comp3-pic">
+
+	<script type="text/javascript">
+
+		var num1=document.getElementById("numone");
+		var num2=document.getElementById("numtwo");
+		var sum=document.getElementById("p1");
+
+		num1.addEventListener("input",add);
+		num2.addEventListener("input",add);
+
+		function add(){
+			var one=parseFloat(num1.value) || 0;
+			var two=parseFloat(num2.value) || 0;
+			var sum1=one+two;
+			sum.innerHTML="Your Sum Is:-" + sum1;
+		}
+
+//pictures
+
+		
+
+		var comp1=document.getElementById("comp1");
+		var comp2=document.getElementById("comp2");
+		var comp3=document.getElementById("comp3");
+
+		comp1.addEventListener("click",picture);
+		comp2.addEventListener("click",picture);
+		comp3.addEventListener("click",picture);
+
+		function picture(){
+			var all=document.querySelectorAll("img");
+
+			for(var i=0; i<all.length;i++){
+				all[i].className="hide";
+			}
+
+			var picId=this.attributes["data-img"].value;
+			var pic=document.getElementById(picId);
+			if(pic.className==="hide")
+				pic.className="";
+			else
+				pic.className="hide";
+		}
+
+	</script>
+</body>
+</html>

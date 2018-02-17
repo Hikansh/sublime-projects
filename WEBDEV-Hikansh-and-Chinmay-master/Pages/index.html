@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		ul li{
+			list-style-type: none;
+			display: inline;
+			color: #484848;
+			font-size: 7em; 
+			font-family: arial;
+			letter-spacing: 15px;
+			animation: animate 1.4s linear infinite;
+		}
+		body{
+			margin: 0;
+			padding:0;
+			background-color: #262626;
+		}
+		ul{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+//			display: flex;
+			transform: translate(-50%,-50%);
+			margin: 0;
+			padding: 0;
+		}
+		@keyframes animate{
+			0%{color: #484848;text-shadow: none;}
+			90%{color: #484848;text-shadow: none;}
+			100%{color: #484848;text-shadow: 0 0 7px #fff900,0 0 50px #ff6c00;}
+		}
+
+		ul li:nth-child(1){
+	animation-delay: .2s;
+}
+		ul li:nth-child(2){
+	animation-delay: .4s;
+}
+		ul li:nth-child(3){
+	animation-delay: .6s;
+}
+		ul li:nth-child(4){
+	animation-delay: .8s;
+}
+		ul li:nth-child(5){
+	animation-delay: 1.0s;
+}
+		ul li:nth-child(6){
+	animation-delay: 1.2s;
+}
+		ul li:nth-child(7){
+	animation-delay: 1.4s;
+}
+	</style>
+</head>
+<body>
+<ul>
+	<li>L</li>
+	<li>O</li>
+	<li>A</li>
+	<li>D</li>
+	<li>I</li>
+	<li>N</li>
+	<li>G</li>
+</ul>
+<script type="text/javascript">
+	setTimeout("window.location='popup.html';",6600);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<form>
+		username:<input type="text" id="uname">
+		password:<input type="password" id="pwd">
+	</form>
+	<input type="submit" id="submit" value="Submit">
+	<p id="p1"></p>
+<script type="text/javascript">
+	var btn=document.getElementById("submit");
+	btn.addEventListener("click",check);
+	function check(){
+		var u=document.getElementById("uname").value;
+		var p=document.getElementById("pwd").value;
+		if(u=="hikansh"&&p=="check1")
+			document.getElementById("p1").innerHTML="<strong>Correct..!!</strong>";
+		else
+			document.getElementById("p1").innerHTML="Incorrect..!!";
+	}
+</script>
+</body>
+</html>

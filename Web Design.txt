@@ -7,6 +7,9 @@ CSS:-
 	GRID SYSTEM OF CSS
 	BOX MODEL
 	ANIMATIONS etc...
+
+	Use Animate.css online link to use built in animations
+
 BOOTSTRAP:-
 	NAVBARS
 	CONTAINER,CONTAINER-FLUID,JUMBOTRON

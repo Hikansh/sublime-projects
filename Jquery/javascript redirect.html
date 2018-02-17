@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.welcome{
+			text-align: center;
+		}
+		.spinframe{
+			text-align: center;
+			margin: 300px;
+			
+		}
+		.spin1{
+		width: 100px;
+		border-radius: 50px;
+		line-height: 0;
+		padding: 50px 0;
+		margin: 60px auto;
+			border-left: 4px solid blue;
+			border-right: 4px solid blue;
+			animation: clock infinite linear 1s;
+		}
+		.spin2{
+			margin: 4px;
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			border-top: 4px solid black;
+			border-bottom: 4px solid black;	
+			animation: anti infinite linear 1s;
+		}
+
+		@keyframes clock{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(360deg);}
+		}
+		@keyframes anti{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+	}
+	</style>
+</head>
+<body>
+	<div class="welcome">
+		<h3>Welcome</h3>
+	</div>
+	<div class="spinframe">
+		<div class="spin1"></div>
+			<div class="spin2"></div>
+				<script type="text/javascript">
+					setTimeout('window.location="basic syntax.html";',50000);
+				</script>
+	</div>
+</body>
+</html>
