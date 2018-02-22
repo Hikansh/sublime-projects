@@ -26,6 +26,7 @@ ul{
   color:#ffffff;
 }
 
+
 .dark{
   padding:15px;
   background:#35424a;
@@ -75,8 +76,14 @@ header .highlight, header .current a{
 }
 
 header a:hover{
-  color:#cccccc;
+  color:#B2BABB;
 //  font-weight:bold;
+ 
+}
+
+li:hover{
+//   animation-name: scaling;
+  //animation-duration: 0.5s;
 }
 
 /* Showcase */
@@ -185,6 +192,7 @@ footer{
     width:100%;
   }
 
+
   header{
     padding-bottom:20px;
   }
@@ -202,4 +210,9 @@ footer{
     width:100%;
     margin-bottom:5px;
   }
+}
+
+@keyframes scaling{
+  from{transform: scale(1);}
+  to{transform: scale(1.5);}
 }
