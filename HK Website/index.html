@@ -3,6 +3,13 @@
 <head>
 	<title></title>
 	<style type="text/css">
+		h1{
+			color: #484848;
+			font-size: 7em; 
+			font-family: arial;
+			letter-spacing: 15px;
+			text-align: center;
+		}
 		ul li{
 			list-style-type: none;
 			display: inline;
@@ -53,9 +60,42 @@
 		ul li:nth-child(7){
 	animation-delay: 1.4s;
 }
+	@media screen and (max-width:1068px) and (min-width:480px) 
+	{
+		h1,ul li{
+			font-size: 3em;
+			letter-spacing: 1px;
+		}
+		h1{
+			padding-top: 100px;
+		}
+	}
+	@media screen and (max-width: 480px) and (min-width: 400px){
+	h1,ul li{
+			font-size: 2em;
+			letter-spacing: 0px;
+		}
+		h1{
+			padding-top: 100px;
+		}
+		ul li{
+			padding-left: -40px;
+		}	
+	}
+	@media screen and (max-width: 400px){
+	h1,ul li{
+			font-size: 1em;
+			letter-spacing: 0px;
+		}
+		h1{
+			padding-top: 100px;
+		}
+	}
+	
 	</style>
 </head>
 <body>
+	<h1>Your Website Is</h1>
 <ul>
 	<li>L</li>
 	<li>O</li>
@@ -66,7 +106,7 @@
 	<li>G</li>
 </ul>
 <script type="text/javascript">
-	setTimeout("window.location='main.html';",6600);
+	setTimeout("window.location='popup.html';",6600);
 </script>
 </body>
 </html>
