@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<style type="text/css">
+		input{
+			display: none;
+		}
+		li.edit span{
+			display: none;
+		}
+		li.edit input{
+			display: initial;
+		}
+	</style>
+</head>
+<body>
+	<h1>Click To Edit One of these:-</h1>
+	<ul id="checklist">
+		<li>
+			<span>Hello</span>
+			<input value="Hello">
+		</li>
+		<li>
+			<span>World</span>
+			<input value="World">
+		</li>
+		<li>
+			<span>Fellow</span>
+			<input value="Fellow">
+		</li>				
+	</ul>
+
+	<script type="text/javascript">
+		var checklist=document.getElementById("checklist");
+		var lis=checklist.querySelectorAll("li");
+		var inputs=checklist.querySelectorAll("input");
+		for (var i = 0; i <= lis.length; i++) {
+			lis[i].addEventListener("click",editItem);
+			inputs[i].addEventListener("blur",updateItem);
+			inputs[i].addEventListener("keypress",enterKey);		
+		}
+
+		function editItem(){
+			this.className="edit";
+			var input=this.querySelector("input");
+			input.focus();
+			input.setSelectionRange(0,input.value.length);
+		}
+
+		function updateItem(){
+			this.previousElementSibling.innerHTML=this.value;
+			this.parentNode.className="";
+		}
+
+		function enterKey(event){
+			if(event.which===13){
+			this.previousElementSibling.innerHTML=this.value;
+			this.parentNode.className="";	
+		}
+	}
+	</script>	
+</html>

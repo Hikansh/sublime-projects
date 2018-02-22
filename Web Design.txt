@@ -9,6 +9,7 @@ CSS:-
 	ANIMATIONS etc...
 
 	Use Animate.css online link to use built in animations
+	Use rotating icons buttons and 3d buttons online
 
 BOOTSTRAP:-
 	NAVBARS

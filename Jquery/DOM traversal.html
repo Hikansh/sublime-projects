@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style type="text/css">
+		.special{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li>one</li>
+	<li class="special">two</li>
+	<li>three</li>
+	<li>four:-
+		<ul class="subul">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>	
+		</ul>	
+	</li>
+</ul>
+
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	
+	//   $("li").first().hide();   select the first li and hide it sly we can use last()
+	//   $("li").eq(0).hide();      eq is used to find elements numbered from 0 to n
+
+	$("li").on('click',function(){
+
+		$(this).removeClass('special');
+		$(this).siblings().addClass('special');
+
+		//$(this).siblings().toggle();  toggle the siblings
+		//$(this).next().toggle();    toggle the next element
+		//$(this).parent().addClass('special');  add the class to parents
+		//$(this).closest('.subul').toggle();    //toggle the closest li element
+	});
+
+</script>
+</body>
+</html>

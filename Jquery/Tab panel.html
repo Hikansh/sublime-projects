@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tab Panel</title>
+	<style type="text/css">
+		div{
+			width: 100%;
+			height: auto;
+			background-color: #262626;
+			color: white;
+			display: none;
+			border: 1px solid black;
+		}
+		button{
+			width: 22%;
+			margin: 5px 1%;
+			background-color: #262626;
+			color: white;
+			height: 30px;
+		}
+		.active{
+			display: block;
+		}
+		.special{
+			background-color: salmon;
+		}
+	</style>
+</head>
+<body>
+
+<button class="special" rel="panel-1">Panel 1</button>
+<button rel="panel-2">Panel 2</button>
+<button rel="panel-3">Panel 3</button>
+<button rel="panel-4">Panel 4</button>
+
+<div class="active" id="panel-1">
+	<h1>Panel 1 contents</h1>
+</div>
+<div id="panel-2">
+	<h1>Panel 2 contents</h1>
+</div>
+<div id="panel-3">
+	<h1>Panel 3 contents</h1>
+</div>
+<div id="panel-4">
+	<h1>Panel 4 contents</h1>
+</div>
+
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').on('click',function(){
+			$('.special').removeClass("special");
+			$(this).addClass("special");
+			var paneltoshow = ($(this).attr('rel'));
+
+			$('.active').slideUp(300,function () {
+				$(this).removeClass("active");
+				$("#"+paneltoshow).slideDown(300);
+				$("#"+paneltoshow).addClass("active");
+			});
+
+		});
+	});
+</script>
+</body>
+</html>

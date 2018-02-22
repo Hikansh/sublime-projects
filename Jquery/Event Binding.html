@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+</head>
+<body>
+<div id="one" style="width: 30%;height: auto; border: 1px solid black; border-radius: 15px; float: left;">
+	<h1 style="padding: 10px;">Hello Boys..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>	
+<div id="two" style="width: 30%;height: auto; border: 1px solid black; border-radius: 15px; float: left;">
+	<h1 style="padding: 10px;">Hello Girls..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+</div>
+<div id="three" style="width: 30%;height: auto; border: 1px solid black; border-radius: 15px; float: left;">
+	<h1 style="padding: 10px;">Hello Everyone..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+</div>
+<br>
+<div style="float: right;">
+<button id="btnone">One</button>
+<button id="btntwo">Two</button>
+<button id="btnthree">Three</button>
+</div>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		 $('#btnone').on('click',function(){
+		 	$('#one').toggle(400).toggle(200);
+		 });
+		 $('#btntwo').on('click',function(){
+		 	$('#two h1').html("You clicked button 2 and changed the text of h1");
+		 });
+		 $('#btnthree').on('mouseover',function(){
+		 	$('#three').toggle(400);
+		 });
+	});
+</script>
+</body>
+</html>

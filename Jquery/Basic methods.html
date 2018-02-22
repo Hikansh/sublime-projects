@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+</head>
+<body>
+<div id="one" style="width: 80%;height: 200px; margin: 0 10%; border: 1px solid black; border-radius: 15px;">
+	<h1 style="padding: 10px;">Hello Boys..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>	
+<div id="two" style="width: 80%;height: 200px; margin: 10px 10%; 10%; border: 1px solid black; border-radius: 15px;">
+	<h1 style="padding: 10px;">Hello Boys..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+</div>
+<div id="three" style="width: 80%;height: 200px; margin: 10px 10%; 10%; border: 1px solid black; border-radius: 15px;">
+	<h1 style="padding: 10px;">Hello Boys..!!</h1>
+	<p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+</div>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#one").hide(500).delay(300).show(500);  //selector.method(time).method() chaining in jquery
+		$("#two").slideUp(900).delay(300).slideDown(900);
+		$("#three").fadeToggle(500).fadeToggle(500);//we can use toggle in any method like slideToggle it will slideup and down 
+	});
+</script>
+</body>
+</html>
