@@ -1,0 +1,84 @@
+nav a.nav-link:hover{
+	color: white;
+	border-bottom: 2px solid #F0F3F4;
+//	border-top: 2px solid #F0F3F4;
+	transition: 0.3s ease;
+	transform: scale(1.2);
+}
+nav a.nav-link{
+	margin: 0 30px;
+}
+body {
+	background: url(../img/bg1.jpg);
+	-webkit-animation:bg 2s ease;
+}
+header{
+	margin: 10px;
+	border: 2px solid white;
+	border-radius: 15px; 
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	min-height: 300px;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/bg3.jpg);
+	background-position: bottom;
+	background-attachment: cover;
+	-webkit-animation:bgmove 14s linear infinite;
+}
+header h2{
+	//font-size: 4px;
+}
+header p{
+	padding-top: 10px;
+}
+section{
+	color: white;
+}
+
+img.center-align{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+footer{
+	border-top: 1px solid white;
+	color: white;
+}
+section#projects{
+	border-top: 1px solid white;
+}
+section#about{
+	background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../img/bg4.jpg);
+	background-position: bottom;
+	background-attachment: cover;
+	-webkit-animation:bgmove 7s linear infinite;
+	color: white;	
+}
+
+@media screen and (max-width:768px){
+	header h2.display-2,
+    footer h2.display-3
+	{
+		font-size: 40px;
+	}
+	header{
+		min-height: auto;
+	}
+}
+@-webkit-keyframes bg{
+	0%{
+		transform: scale(0.2);
+	}
+	80%{
+		transform: scale(1.4);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes bgmove{
+	from{background-position: 0 0;}
+	to{
+		background-position: 500 0;
+	}
+}
