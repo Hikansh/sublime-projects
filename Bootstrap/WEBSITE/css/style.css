@@ -57,9 +57,14 @@ section#about{
 
 @media screen and (max-width:768px){
 	header h2.display-2,
-    footer h2.display-3
+    footer h2.display-3,
+   	#about h2.display-2
 	{
 		font-size: 40px;
+	}
+	header p.lead,
+	section p.lead{
+		font-size: 14px;
 	}
 	header{
 		min-height: auto;
