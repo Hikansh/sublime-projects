@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </head>
 <body>
 
@@ -33,7 +34,7 @@
   </div>
 </nav>
 
-<header class="container">
+<header class="container head">
 	<h2 class="display-2">Web Solutions PVT. LTD</h2>
 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -45,13 +46,13 @@
 
 <section class="container-fluid">
 
-    <h1 class="py-5 font-weight-bold text-center">Why are we so great?</h1>
+    <h1 class="py-5 font-weight-bold text-center heading1">Why are we so great?</h1>
     <p class="px-5 mb-5 pb-3 lead grey-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam.</p>
 
     <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-4 left-section1">
 
         <div class="row mb-2">
         <div class="col-2">
@@ -89,12 +90,12 @@
     </div>
     
 
-    <div class="col-md-4 mb-2 d-flex justify-content-center img-fluid">
+    <div class="col-md-4 mb-2 d-flex justify-content-center img-fluid mid-section1">
         <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0" >
     </div>
 
 
-    <div class="col-md-4 text-center">
+    <div class="col-md-4 text-center right-section1">
 
         <div class="row mb-2">
         <div class="col-2">
@@ -147,7 +148,7 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	 <br>
  <div id="accordian" role="tablist" style="color: black;">
-    <div class="row">
+    <div class="row btns">
 <div class="col-md-4 col-12">
    <div class="card">
     <a href="#download" class="btn btn-primary" data-toggle="collapse" data-parent="#accordian" style="background-color: #262626;">Our Faculty</a>
@@ -191,7 +192,7 @@
 
  <section class="container-fluid" id="projects">
         
-    <h2 class="text-center h1 my-5">
+    <h2 class="text-center h1 my-5 heading2">
         <strong>Our best projects</strong>
     </h2>
     <p class="px-xl-5 text-center grey-text mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -199,13 +200,13 @@
     
     <div class="row">
     
-        <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5">
+        <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5 left-section1">
     
             <img src="https://mdbootstrap.com/img/Photos/Others/images/83.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
     
         </div>
     
-        <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+        <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4 right-section1">
     
             <div class="row mb-3">
                 <div class="col-1 mr-1">
@@ -248,7 +249,7 @@
     
     <div class="row pt-5">
     
-        <div class="col-lg-6 col-xl-7 mb-3">
+        <div class="col-lg-6 col-xl-7 mb-3 left-section1">
     
             <div class="row mb-3">
                 <div class="col-1 mr-1">
@@ -282,7 +283,7 @@
             </div>
     
         </div>
-        <div class="col-lg-6 col-xl-5 mb-3">
+        <div class="col-lg-6 col-xl-5 mb-3 right-section1">
     
             <img src="https://mdbootstrap.com/img/Photos/Others/images/82.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
     
@@ -301,5 +302,82 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+     window.sr=ScrollReveal();
+     sr.reveal('.navbar',{
+        duration:2000,
+        origin:'bottom',
+        reset:true,
+        mobile:true,
+        viewFactor:0.2
+     });
+     sr.reveal('.head' , {
+        duration:2000,
+        origin:'bottom',
+        reset:true,
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('.heading1' , {
+        duration:2000,
+        origin:'bottom',
+        distance:'100px',
+        reset:true,
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('.left-section1' , {
+        duration:2000,
+        origin:'left',
+        distance:'100px',
+        reset:true,
+        mobile:true,
+        viewFactor:0.2        
+     });  
+     sr.reveal('.mid-section1' , {
+        duration:2000,
+        origin:'bottom',
+        distance:'100px',
+        reset:true,
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('.right-section1' , {
+        duration:2000,
+        origin:'right',
+        reset:true,
+        distance:'100px',
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('.heading2' , {
+        duration:2000,
+        origin:'bottom',
+        reset:true,
+        distance:'100px',
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('#about' , {
+        duration:2000,
+        origin:'top',
+        reset:true,
+        distance:'100px',
+        mobile:true,
+        viewFactor:0.2        
+     });
+     sr.reveal('.btns' , {
+        duration:2000,
+        delay:1500,
+        origin:'bottom',
+        reset:true,
+        distance:'100px',
+        mobile:true,
+        viewFactor:0.2        
+     });
+
+</script>
+
 </body>
 </html>

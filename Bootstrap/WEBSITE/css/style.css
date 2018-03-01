@@ -10,7 +10,7 @@ nav a.nav-link{
 }
 body {
 	background: url(../img/bg1.jpg);
-	-webkit-animation:bg 2s ease;
+	//-webkit-animation:bg 2s ease;
 }
 header{
 	margin: 10px;
