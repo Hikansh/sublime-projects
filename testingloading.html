@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loading screen</title>
+	<style type="text/css">
+		body{
+			background-color: #262626;
+			margin: 0;
+			padding: 0;
+		}
+		h1{
+			text-align: center;
+			font-size: 8em;
+			color: #484848;
+			animation: anim2 1.4s linear infinite;
+			font-family: arial;
+		}
+		ul{
+			transform: translate(-50%,-50%);
+			position: absolute; 	
+			top: 50%;
+			left: 50%;
+		}
+		ul li{
+			list-style-type: none;
+			font-size: 8em;
+			font-family: arial;
+			color: #484848;
+			animation: anim 1.4s linear infinite;
+			display: inline-block;
+			letter-spacing: 4px;
+		}
+		@keyframes anim{
+			0%{text-shadow: none;}
+			90%{
+				text-shadow: none;
+			}
+			100%{
+				text-shadow: 0 0 7px #fff900,0 0 50px #ffc600;
+			}
+		}
+		@keyframes anim2
+		{
+			0%{transform: scale(1);}
+			50%{transform: scale(1.1);}
+			100%{transform: scale(1.2);}
+		}
+		ul li:nth-child(1){
+			animation-delay: .2s;
+		}
+		ul li:nth-child(2){
+			animation-delay: .4s;
+		}
+		ul li:nth-child(3){
+			animation-delay: .6s;
+		}
+		ul li:nth-child(4){
+			animation-delay: .8s;
+		}
+		ul li:nth-child(5){
+			animation-delay: 1.0s;
+		}
+		ul li:nth-child(6){
+			animation-delay: 1.2s;
+		}
+		ul li:nth-child(7){
+			animation-delay: 1.4s;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Your Website is</h1>
+<ul>
+	<li>L</li>
+	<li>O</li>
+	<li>A</li>
+	<li>D</li>
+	<li>I</li>
+	<li>N</li>
+	<li>G</li>
+</ul>
+
+<script type="text/javascript">
+	setTimeout("window.location='testing1.html';",4000);
+</script>
+
+</body>
+</html>

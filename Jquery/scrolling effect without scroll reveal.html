@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	
+	<script type="text/javascript">
+	
+		$div1=$("#one");
+		$div2-$('#two');
+		$(window).on('scroll',()=>{
+			var top=$(window).scrollTop();
+			$div1.css('transform','rotate(' + top + 'deg)');
+			$div2.css('transform','rotate(' + top + 'deg)');
+		});
+	
+
+	</script>
+	<style type="text/css">
+		div#one{
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%,-50%);
+			width: 350px;
+			height: 350px;
+			border-radius: 50%;
+			border: 1px solid black;
+			display: flex;
+			align-items: center;
+			text-align: center;
+		}
+		div#two{
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			margin: 1000px 0px;
+			transform: translate(-50%,-50%);
+			width: 350px;
+			height: 350px;
+			border-radius: 50%;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+<div id="one">hello</div>
+<br>
+<div id="two"></div>
+</body>
+</html>

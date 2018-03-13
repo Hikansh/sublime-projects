@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding:0;
+			background-color: #262626;
+		}
+		ul{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 600px;
+			height: 150px;
+		}
+		ul li{
+			position: absolute;
+			margin: 50px;
+			list-style-type: none;
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			transform: rotate(-45deg);
+			transition: .5s;
+			overflow: hidden;
+			opacity: .5;
+		}
+		ul li.it1{
+			top: 0%;
+			left: 0%;
+		}
+		ul li.it2{
+			bottom: 0%;
+			left: 25%;
+		}
+		ul li.it3{
+			top: 0%;
+			left: 50%;
+		}
+		ul li.it4{
+			bottom:  0%;
+			left: 75%;
+		}
+		ul li.it5{
+			top: 0%;
+			left: 100%;
+		}
+		div.bg{
+			width: 100%;
+			height: 100%;
+			transform: rotate(45deg) scale(1.4);
+			
+		}
+		ul li.it1 .bg{
+			background:url("images/bg4.jpg");
+			background-size: cover;
+		}
+		ul li.it2 .bg{
+			background:url("images/bg5.jpg");
+			background-size: cover;
+		}
+		ul li.it3 .bg{
+			background:url("images/bg6.jpg");
+			background-size: cover;
+		}
+		ul li.it4 .bg{
+			background:url("images/bg7.jpg");
+			background-size: cover;
+		}
+		ul li.it5 .bg{
+			background:url("images/bg8.jpg");
+			background-size: cover;
+		}
+		ul li:hover{
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li class="it1"><div class="bg"></div></li>
+	<li class="it2"><div class="bg"></div></li>
+	<li class="it3"><div class="bg"></div></li>
+	<li class="it4"><div class="bg"></div></li>
+	<li class="it5"><div class="bg"></div></li>
+</ul>
+</body>
+</html>
