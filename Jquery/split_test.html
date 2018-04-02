@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: ariel;
+			overflow-x: hidden;
+		}
+		.row{
+			height: 100vh;
+		}
+		.col-6,.col-9,.col-3{
+			color: white;
+			text-align: center;
+			//width: 100%;
+			height: 100%;
+		}
+		h1{
+			position: absolute;
+			top: 20%;
+			font-size: 6rem;
+			left: 50%;
+			transform: translateX(-50%);
+			white-space: nowrap;
+		}
+		.btn{
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.left{
+			background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/comp1.jpg) center center no-repeat;
+			transition: 1s;
+		}
+		.left:before{
+			content: '';
+			position: absolute;
+			top: 0;left: 0;	
+			width: 100%;
+			height: 100%;
+			transition: 1s;
+			background-color: rgba(1,51,1,0.3);
+		}
+		.right{
+			background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../images/comp2.jpg) center center no-repeat;
+			transition: 1s;
+		}
+		.right:before{
+			content: '';
+			position: absolute;
+			top: 0;left: 0;	
+			width: 100%;
+			height: 100%;
+			transition: 1s;
+			background-color: rgba(1,1,51,0.3);
+		}
+		.col-3{
+			z-index: 2;
+			color: #262626;
+			opacity: 0.98;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container-fluid row align-items-center">
+	<div class="split left col-6">
+		<h1>Hello</h1>
+		<a href="" class="btn btn-primary">Read more</a>
+	</div>
+	<div class="split right col-6">
+		<h1>World</h1>
+		<a href="" class="btn btn-success">Read more</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	const left=document.querySelector('.left');
+	const right=document.querySelector('.right');
+	const con=document.querySelector('.container-fluid');
+
+	left.addEventListener('mouseenter',()=>{
+		left.classList.remove('col-6');
+		left.classList.add('col-9');
+		right.classList.remove('col-6');
+		right.classList.add('col-3');
+	});
+	left.addEventListener('mouseleave',()=>{
+		left.classList.remove('col-9');
+		left.classList.add('col-6');
+		right.classList.remove('col-3');
+		right.classList.add('col-6');
+	});
+	right.addEventListener('mouseenter',()=>{
+		right.classList.remove('col-6');
+		right.classList.add('col-9');
+		left.classList.remove('col-6');
+		left.classList.add('col-3');
+	});
+	right.addEventListener('mouseleave',()=>{
+		right.classList.remove('col-9');
+		right.classList.add('col-6');
+		left.classList.remove('col-3');
+		left.classList.add('col-6');
+	});
+</script>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
+  

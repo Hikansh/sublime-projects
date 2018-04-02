@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destination Places</title>
+  
+ 
+    <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            font-family: ariel;
+            padding: 0;
+            background-color: #262626;
+            color:white;
+            overflow-x: hidden;
+        }
+        .row{
+            height: 100vh;
+        }
+        .left{
+           text-align: center;
+           transition: 1s;
+           background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('resource/disneyland/6.jpg') center center no-repeat;
+          // background-color: blue;
+        }
+        h1{
+            top: 30%;
+            left: 50%;transform: translateX(-50%);
+            position: absolute;
+        }
+        a{
+            position: absolute;
+            top: 50%;left: 50%;transform: translateX(-50%);
+        }
+        .right{
+            text-align: center; 
+            background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('resource/disneyland/2.jpg') center center no-repeat;
+           // background-color: red;
+           transition: 1s;          
+        }
+    .col-xs-6,.col-xs-3,.col-xs-9{
+            height: 100%;
+        }
+                p{
+            position: absolute;
+            top: 50%;left: 50%;transform: translateX(-50%);
+        }
+
+        .col-xs-3{
+            color: #484848;
+            opacity: 0.9;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+        <div class="left col-xs-6">
+          <h1>Disney</h1>
+          <a href="#" class="btn btn-primary">Discover</a> 
+        </div>
+        <div class="right col-xs-6">
+          <h1>Land</h1>
+         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p> </div>
+    </div>
+    </div>
+  
+<script type="text/javascript">
+    const left=document.querySelector('.left');
+    const right=document.querySelector('.right');
+
+    left.addEventListener('mouseenter',()=>{
+        left.classList.remove('col-xs-6');
+        left.classList.add('col-xs-9');
+        right.classList.remove('col-xs-6');
+        right.classList.add('col-xs-3');
+    });
+    left.addEventListener('mouseleave',()=>{
+        left.classList.remove('col-xs-9');
+        left.classList.add('col-xs-6');
+        right.classList.remove('col-xs-3');
+        right.classList.add('col-xs-6');
+    });
+    right.addEventListener('mouseenter',()=>{
+        right.classList.remove('col-xs-6');
+        right.classList.add('col-xs-9');
+        left.classList.remove('col-xs-6');
+        left.classList.add('col-xs-3');
+    });
+    right.addEventListener('mouseleave',()=>{
+        right.classList.remove('col-xs-9');
+        right.classList.add('col-xs-6');
+        left.classList.remove('col-xs-3');
+        left.classList.add('col-xs-6');
+    });
+</script>
+
+   <!-- <script src="js/script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->
+</body>
+</html>

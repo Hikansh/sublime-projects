@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: ariel;
+        background-color: #262626;
+        overflow-x: hidden;
+      }
+      .row{
+        height: 100vh;
+      }
+      .col-12{
+        text-align: center;
+      }
+      ul li{
+        list-style-type: none;
+        display: inline-block;
+        letter-spacing: 17px;
+        font-size: 6rem;
+        color: #484848;
+        animation: anim 1.4s linear infinite;
+      }
+      ul li:nth-child(1){
+        animation-delay: .2s;
+      }
+      ul li:nth-child(2){
+        animation-delay: .4s;
+      }
+      ul li:nth-child(3){
+        animation-delay: .6s;
+      }
+      ul li:nth-child(4){
+        animation-delay: .8s;
+      }
+      ul li:nth-child(5){
+        animation-delay: 1.0s;
+      }
+      ul li:nth-child(6){
+        animation-delay: 1.2s;
+      }
+      ul li:nth-child(7){
+        animation-delay: 1.4s;
+      }
+      @keyframes anim{
+        0%{text-shadow: none;}
+        90%{text-shadow: none;}
+        100%{text-shadow: 0 0 5px #fff900,0 0 20px #ffc600;}
+      }
+      h1{
+        color: #484848;
+        position: absolute;
+        font-size: 6rem;
+        border:1px solid white;
+        padding: 15px;
+        transition: 1s;
+        animation-delay: 0.2s;
+        border-radius: 20px;
+        animation: anim2 1.4s linear infinite;
+        top: 15%;left: 50%;transform: translateX(-50%);
+      }
+      @keyframes anim2{
+        0%{border:1px solid white;opacity: 0.5;}
+        50%{border:1px solid #fff900;opacity: 1;}
+        100%{border:none;}
+      }
+      @media screen and (max-width:1268px){
+        h1{
+          font-size: 4rem;
+        }
+      }
+      @media screen and (max-width:948px){
+        h1{
+          font-size: 2.5rem;
+        }
+        ul li{
+          letter-spacing: 13px;
+        font-size: 4rem;
+        }
+      }
+      @media screen and (max-width:648px){
+        h1{
+          font-size: 1.5rem;top: 30%;
+        }
+        ul li{
+          letter-spacing: 13px;
+        font-size: 2.5rem;
+        }
+      }
+      @media screen and (max-width:448px){
+        h1{
+          top: 30%;
+          font-size: 0.7rem;
+        }
+        ul li{
+          letter-spacing: 4px;
+        font-size: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Website Is</h1>
+    <div class="container-fluid row align-items-center">
+      <div class="col-12">
+      <ul>
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>D</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+      </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      setTimeout("window.location='split.html';",6000);
+    </script>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
