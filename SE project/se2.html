@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link  href="node_modules/@fengyuanchen/datepicker/dist/datepicker.css" rel="stylesheet">
+  
+<style type="text/css">
+  body{
+    padding-top: 20px;
+  }
+  img{
+    width: 100%;
+    max-height: 400px;
+  }
+  section{
+    padding-bottom: 40px;
+  }
+  footer{
+    margin-top: 15px;
+   /* background-color: darkgray;
+    border-radius: 20px;
+    border:1px solid black;*/
+  }
+  .circle{
+
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#mynav">
+
+<!--Navbar-->
+
+  <nav id="mynav" class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">OYO Rooms</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="se.html">About Us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#book">Book Rooms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#enquire">Enquire</a>
+      </li>
+    </ul>
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">SignUp</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="login.html">LogIn</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!--Header-->
+
+<div class="container text-center" style="padding-top: 70px;" id="book">
+<h2 class="display-3">Book Your Hotel Rooms</h2>
+<hr><br>
+<form action="#" method="POST">
+<div class="form-group">
+  <label><h3 class="lead">Choose Your Destination Location:-</h3></label>
+  <div class='col-4 offset-4'>
+  <select class="form-control" id="location">
+          <option>Delhi</option>
+          <option>Kolkata</option>
+  </select>
+  <br>
+  </div>
+  <label><h3 class="lead">Select Arrival Date:-</h3></label>
+ <div class='col-4 offset-4'>  
+  <input data-toggle="datepicker" class="form-control" id="arrival_date">
+  <div data-toggle="datepicker"></div>
+</div>
+<br>
+  <label><h3 class="lead">Select Departure Date:-</h3></label>
+ <div class='col-4 offset-4'>  
+  <input data-toggle="datepicker" class="form-control" id="depart_date">
+  <div data-toggle="datepicker"></div>
+</div>
+<br>
+<button type="submit" class="btn btn-success btn-lg">Submit</button>
+</div>
+</form>
+
+<!--footer-->
+<hr>
+<footer id="footer">
+  <div class="container text-center">
+  <h3 class="display-4">Contact Us</h3>
+  <p class="lead">Tel:- 011-25467894</p>
+  <p class="lead">Fax:- +91-011-1234567</p>
+  <p class="lead">E-mail:- oyorooms@oyo.org</p>
+  <p class="lead">
+    North road Street California
+  </p>
+
+<hr>
+  <p class="display-4">Follow us:-</p>
+  <a href="https://www.twitter.com"><i class="fab fa-twitter fa-3x"></i></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.facebook.com"><i class="fab fa-facebook-f fa-3x"></i></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
+</div>
+<br><hr>
+<div class="container-fluid text-center" style="padding: 6px;">
+  <h4>Copyright &copy OYO</h4>  
+</div>
+</div>
+</footer>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="node_modules/@fengyuanchen/datepicker/dist/datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$('[data-toggle="datepicker"]').datepicker();  
+</script>
+  </body>
+</html>
