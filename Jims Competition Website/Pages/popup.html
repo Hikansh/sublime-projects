@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>Pop-up Example</title>
+  <link href="../css/stylepopup.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    .hide{
+      display: none;
+    }
+  </style>
+</head>
+<body class="pop-up">
+  <div id="pop-up">
+    <div class="container">
+      <h1>Subscribe To Our Newsletters</h1>
+      <p>Join the mailing list to be spammed with useful city infos and SCT updates</p>
+      <input type="email" placeholder="email" id="ip" required>
+      <button onClick="sub()">Submit</button>
+      <div class="cross"><a href="main.html" id="crs">x</a></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var crs=document.getElementById("crs");
+    crs.addEventListener("click",function close(){
+      document.getElementById("pop-up").className="hide";
+    });
+    function sub(){
+      if(document.getElementById("ip").value===""){
+        alert("Invalid email");
+      }
+      else{
+      document.getElementById("pop-up").className="hide";
+      alert("email sent");
+	  window.location="main.html";
+      }
+    }
+  </script>
+</body>
