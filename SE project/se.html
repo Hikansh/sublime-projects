@@ -57,10 +57,7 @@
         <a class="nav-link" href="#about">About Us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="se2.php">Book Rooms</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#enquire">Enquire</a>
+        <a class="nav-link" href="se2.html">Book Rooms</a>
       </li>
     </ul>
       <ul class="navbar-nav ml-auto">
@@ -79,56 +76,7 @@
 <!--Header-->
 
 <div class="container text-center" style="padding-top: 70px;">
- <!-- <div class="jumbotron" style="background-color: #909497  ">
-
-  <br>
-  <div id="accordian" role="tablist">
-    <div class="row">
-<div class="col-md-4 col-12">
-   <div class="card">
-    <a href="#download" class="btn btn-primary" data-toggle="collapse" data-parent="#accordian">Join Us</a>
-  <div class="collapse" id="download">
-    <div class="card card-block">
-    <h2>Join Us</h2>
-    <p class="lead">Your Efforts..One's Life</p>
-    <p class="lead">Join Us by visiting your nearest branch</p>
-  </div>
-</div>
-   </div></div> 
-
-<div class="col-md-4 col-12">
-   <div class="card">
-    <a href="#contact"  class="btn btn-info" data-toggle="collapse" data-parent="#accordian">Our Sponsors</a>
-  <div class="collapse" id="contact">
-<div class="card card-block">
-    <h2>Our Sponsors</h2>
-    <ul>
-      <li>Bright Life Insurance Pvt. Ltd</li>
-      <li>Medanta-The Medicity</li>
-      <li>Uphaar Travels</li>
-    </ul>
-  </div>
-</div>
-   </div> </div>
-
-<div class="col-md-4 col-12">
-<div class="card">
-    <a href="#support" class="btn btn-primary" data-toggle="collapse" data-parent="#accordian">Help & Support</a>
-  <div class="collapse" id="support">
-    <div class="card card-block">
-      <h2>Helping Others</h2>
-    <p class="lead">if you are seeking for any kind of help or support then you can directly <a href="#footer">contact us</a></p>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>-->
-
-
-
+ 
 <!--About-->
 
 <div class="container" id="about">
@@ -179,6 +127,37 @@
 </div>
 </div>
 </footer>
-<script src="../lightbox/js/lightbox.js"></script>
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  window.sr=ScrollReveal();
+  sr.reveal('.navbar',{
+    duration:1000,
+    mobile:true,
+    reset:true,
+    delay:50,
+    opacity:0,
+    origin:'top',
+    distance:'400px'
+  });
+  sr.reveal('#about',{
+    duration:1000,
+    delay:50,
+    mobile:true,
+    reset:true,
+    opacity:0,
+    origin:'left',
+    distance:'400px'
+  });
+    sr.reveal('#footer',{
+    duration:1000,
+    delay:50,
+    mobile:true,
+    reset:true,
+    opacity:0,
+    origin:'right',
+    distance:'400px'
+  });
+</script>
   </body>
 </html>

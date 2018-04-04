@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,8 +28,8 @@
     border-radius: 20px;
     border:1px solid black;*/
   }
-  #pa,#pa2{
-    display: none;
+  .circle{
+
   }
 </style>
 
@@ -50,10 +47,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="se.html">About Us<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#about">About Us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#book">Book Rooms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#enquire">Enquire</a>
       </li>
     </ul>
       <ul class="navbar-nav ml-auto">
@@ -71,37 +71,20 @@
 
 <!--Header-->
 
-<div class="container text-center" style="padding-top: 70px;" id="book">
-<h2 class="display-3">Search For A Nearby Hotel</h2>
-<hr><br>
-<form action="se3.html" onsubmit="return validate()">
+<div class="container text-center" style="padding-top: 70px;">
+
 <div class="form-group">
-  <p class="alert alert-danger" id="pa">Please Select A City..!</p>
-  <p class="alert alert-danger" id="pa2">Enter Valid Dates..!</p>
   <label><h3 class="lead">Choose Your Destination Location:-</h3></label>
   <div class='col-4 offset-4'>
-  <select class="form-control" id="location" onchange="change()">
-          <option value="SC">Select city</option>
+  <select class="form-control" id="location">
           <option>Delhi</option>
           <option>Kolkata</option>
   </select>
-  <br>
   </div>
   <label><h3 class="lead">Select Arrival Date:-</h3></label>
- <div class='col-4 offset-4'>  
-  <input data-toggle="datepicker" class="form-control" id="arrival_date" required>
+  <input data-toggle="datepicker">
   <div data-toggle="datepicker"></div>
 </div>
-<br>
-  <label><h3 class="lead">Select Departure Date:-</h3></label>
- <div class='col-4 offset-4'>  
-  <input data-toggle="datepicker" class="form-control" id="depart_date" required>
-  <div data-toggle="datepicker"></div>
-</div>
-<br>
-<button type="submit" class="btn btn-success btn-lg">Submit</button>
-</div>
-</form>
 
 <!--footer-->
 <hr>
@@ -110,9 +93,9 @@
   <h3 class="display-4">Contact Us</h3>
   <p class="lead">Tel:- 011-25467894</p>
   <p class="lead">Fax:- +91-011-1234567</p>
-  <p class="lead">E-mail:- oyorooms@oyo.org</p>
+  <p class="lead">E-mail:- udaan_delhi@udn.org</p>
   <p class="lead">
-    North road Street California
+    17A block Mahatma Gandhi Road,New Delhi:110035
   </p>
 
 <hr>
@@ -123,9 +106,9 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
 </div>
-<br><hr>
-<div class="container-fluid text-center" style="padding: 6px;">
-  <h4>Copyright &copy OYO</h4>  
+<br><br>
+<div class="jumbotron text-center" style="background-color: #909497;padding: 6px;">
+  <h4>Copyright &copy Udaan</h4>  
 </div>
 </div>
 </footer>
@@ -134,72 +117,8 @@
     <script src="node_modules/@fengyuanchen/datepicker/dist/datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script type="text/javascript">
-
-window.sr=ScrollReveal();
- sr.reveal('.navbar',{
-    duration:1000,
-    mobile:true,
-    reset:true,
-    delay:50,
-    opacity:0,
-    origin:'top',
-    distance:'400px'
-  });
-  sr.reveal('#footer',{
-    duration:1000,
-    delay:50,
-    mobile:true,
-    reset:true,
-    opacity:0,
-    origin:'bottom',
-    distance:'400px'
-  });
-  sr.reveal('#book',{
-    duration:1000,
-    delay:50,
-    mobile:true,
-    reset:true,
-    opacity:0,
-    origin:'left',
-    distance:'400px'
-  });
-
-function change(){
-  var location=document.getElementById('location');
-  var invalid=location.value=='SC';
-  if (invalid) {
-    $('#pa').css('display','block');
-    return false;
-  }
-  else{
-   $('#pa').css('display','none');
-    return true; 
-  }
-}
-
-function date_valid(){
-  var arrival_date=document.getElementById('arrival_date').value;
-  var depart_date=document.getElementById('depart_date').value;
-  if (depart_date<arrival_date) {
-    $('#pa2').css('display','block');
-    return false;
-  }
-  else{
-    $('#pa2').css('display','none');
-    return true;
-  }
-}
-
-function validate(){
-  var c=change();
-  var d=date_valid();
-  //alert(c);alert(d);
-  var a=c&&d;
-  return a;
-}
-$('[data-toggle="datepicker"]').datepicker(); 
+$('[data-toggle="datepicker"]').datepicker();  
 </script>
   </body>
 </html>
