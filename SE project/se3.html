@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <link href="../lightbox/src/css/lightbox.css" rel="stylesheet">
+
     <script type="text/javascript" src="../lightbox/dist/js/lightbox-plus-jquery.js"></script>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
 <style type="text/css">
   body{
@@ -30,8 +31,8 @@
     border-radius: 20px;
     border:1px solid black;*/
   }
-  .circle{
-
+  #err1,#err2,#err3,#book1,#book2,#book3{
+    display: none;
   }
 </style>
 
@@ -95,7 +96,29 @@
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt i</p>
-    <a href="#" class="btn btn-primary">Book Rooms</a>
+
+    <div class="row align-items-center">
+      <div class="col-6 text-right">
+        <p id="one" class="lead">1</p>    
+      </div>
+      <div class="col-6">
+        <div class="row text-left">
+          <div class="col-12">
+            <i class="fas fa-plus" id="addone"></i>            
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-12">
+             <i class="fas fa-minus" id="subone"></i>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-primary" onclick="book1()">Book Rooms</a>
+    <br>
+    <div class="alert alert-success" id="book1">SuccessFully Booked Your Rooms..!</div>
+    <div class="alert alert-danger" id="err1">You can select rooms in range(1-5){Minimum:1,Maximum:5}</div>
    </div>
 </div>
    </div></div> 
@@ -113,7 +136,26 @@
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt i</p>
-    <a href="#" class="btn btn-success">Book Rooms</a>
+        <div class="row align-items-center">
+      <div class="col-6 text-right">
+        <p id="two" class="lead">1</p>    
+      </div>
+      <div class="col-6">
+        <div class="row text-left">
+          <div class="col-12">
+            <i class="fas fa-plus" id="addtwo"></i>            
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-12">
+             <i class="fas fa-minus" id="subtwo"></i>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-success" onclick="book2()">Book Rooms</a><br>
+    <div class="alert alert-success" id="book2">SuccessFully Booked Your Rooms..!</div>
+    <div class="alert alert-danger" id="err2">You can select rooms in range(1-5){Minimum:1,Maximum:5}</div>
   </div>
 </div>
    </div> </div>
@@ -131,7 +173,26 @@
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt i</p>
-    <a href="#" class="btn btn-warning">Book Rooms</a>
+    <hr>
+    <div class="row align-items-center">
+      <div class="col-6 text-right">
+        <p id="three" class="lead">1</p>    
+      </div>
+      <div class="col-6">
+        <div class="row text-left">
+          <div class="col-12">
+            <i class="fas fa-plus" id="addthree"></i>            
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-12">
+             <i class="fas fa-minus" id="subthree"></i>            
+          </div>
+        </div>
+      </div>
+    </div>    <a href="#" class="btn btn-warning" onclick="book3()">Book Rooms</a><br>
+    <div class="alert alert-success" id="book3">SuccessFully Booked Your Rooms..!</div>
+    <div class="alert alert-danger" id="err3">You can select rooms in range(1-5){Minimum:1,Maximum:5}</div>
   </div>
 </div>
 </div>
@@ -263,6 +324,93 @@
     origin:'right',
     distance:'400px'
   });
+
+  var count1=1;
+  var count2=1;
+  var count3=1;
+  $('#addone').on('click',()=>{
+    count1++;
+    if (count1>=6) {
+      alert("You can not add more than 5 rooms");
+      $('#err1').css('display','block');
+    }
+    else
+    {
+      $('#err1').css('display','none');   
+      document.getElementById('one').innerHTML = count1;
+    }
+  });
+  $('#subone').on('click',()=>{
+    count1--;
+    if (count1<=0) {
+      alert("You can not Select 0 rooms");
+      $('#err1').css('display','block');
+    }
+    else
+    {   
+      $('#err1').css('display','none');
+      document.getElementById('one').innerHTML = count1;
+    }
+  });
+  $('#addtwo').on('click',()=>{
+    count2++;
+    if (count2>=6) {
+      alert("You can not add more than 5 rooms");
+      $('#err2').css('display','block');
+    }
+    else
+    {   
+      $('#err2').css('display','none');
+      document.getElementById('two').innerHTML = count2;
+    }
+  });
+  $('#subtwo').on('click',()=>{
+    count2--;
+    if (count2<=0) {
+      alert("You can not Select 0 rooms");
+      $('#err2').css('display','block');
+    }
+    else
+    {   $('#err2').css('display','none');
+      document.getElementById('two').innerHTML = count2;
+    }
+  });
+  $('#addthree').on('click',()=>{
+    count3++;
+    if (count3>=6) {
+      alert("You can not add more than 5 rooms");
+      $('#err3').css('display','block');
+    }
+    else
+    {   
+      $('#err3').css('display','none');
+      document.getElementById('three').innerHTML = count3;
+    }
+  });
+  $('#subthree').on('click',()=>{
+    count3--;
+    if (count3<=0) {
+      alert("You can not Select 0 rooms");
+      $('#err3').css('display','block');
+    }
+    else
+    {   $('#err3').css('display','none');
+      document.getElementById('three').innerHTML = count3;
+    }
+  });
+
+  function book1(){
+    alert('Your Rooms are Booked..!!');
+    $('#book1').css('display','block');
+  }
+  function book2(){
+    alert('Your Rooms are Booked..!!');
+    $('#book2').css('display','block');
+  }
+  function book3(){
+    alert('Your Rooms are Booked..!!');
+    $('#book3').css('display','block');
+  }
 
   </script>
   </body>
