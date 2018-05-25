@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style type="text/css">
+      #comic,#thriller,#horror{
+        cursor: pointer;
+      }
+      #comic:hover,#thriller:hover,#horror:hover{
+        color: #fce960;
+      }
+      #comicdiv,#thrillerdiv,#horrordiv{
+        display: none;
+        transition: 1s;
+      }
+    </style>
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-md navbar-light" style="background-color:wheat;color:white;">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Ecommerce App</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Home</a>
+      <a class="nav-item nav-link" href="#">Sign In</a>
+      <a class="nav-item nav-link" href="#">Sign Up</a>
+    </div>
+  </div>
+</nav>  
+<br>
+
+<div class="container-fluid text-center">
+  <h1 class="display-3">About Us</h1><hr>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <hr>
+  <h1 class="display-3">We Offer Many Genres:-</h1><br>
+  <small>(Click To Expand)</small ><br><br><br>
+</div>
+<div class="container text-center">
+  <h1 class="display-4" id="comic">Comic Books</h1><hr><br>
+  <div class="row align-items-center" id="comicdiv">
+    <div class="col-md-1 col-xs-0"></div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book1</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book2</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book3</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>        
+  </div>
+</div><br><br>
+
+<div class="container text-center">
+  <h1 class="display-4" id="thriller">Thriller Books</h1><hr><br>
+  <div class="row align-items-center" id="thrillerdiv">
+    <div class="col-md-1 col-xs-0"></div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book1</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book2</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book3</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>        
+  </div>
+</div><br><br>
+
+<div class="container text-center">
+  <h1 class="display-4" id="horror">Horror Books</h1><hr><br>
+  <div class="row align-items-center" id="horrordiv">
+    <div class="col-md-1 col-xs-0"></div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book1</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book2</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>
+    <div class="card col-xs-12 col-md-3 mr-5">
+      <img src="images/comp1.jpg" class="img-fluid img-thumbnail card-img-top">
+      <h1 class="card-title">Book3</h1>
+      <p class="card-text">this book is from this author and this genre</p>
+      <a href="#" class="btn btn-primary">Buy this book?</a><br>
+    </div>        
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('#comic').on('click',()=>{
+    $('#comicdiv').css('display','flex');
+  });
+  $('#thriller').on('click',()=>{
+    $('#thrillerdiv').css('display','flex');
+  });
+  $('#horror').on('click',()=>{
+    $('#horrordiv').css('display','flex');
+  });
+</script>
+
+  </body>
+</html>
