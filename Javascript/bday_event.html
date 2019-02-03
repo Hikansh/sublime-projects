@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baby's Birthday</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <style type="text/css">
+  	body{
+  		background-color: #242424;
+  	}
+  	.container{
+  		color: white;
+  	}
+  	.jumbotron{
+  		
+  	color:black;
+  	border:2px solid white;
+  	-moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+   //box-shadow: 0 8px 6px -6px black;
+   font-size: 2em;
+  	}
+  	.bday {
+  		background-color: #fff83f;
+  		animation: anim 2.5s linear infinite;
+  		display: none;
+
+  	}
+
+  	#days{
+  		animation: anim 2.5s linear infinite 1s;
+  		background-color: #76a5f2;
+  	}
+
+  	#hours{
+background-color: #ff3df5;
+animation: anim 2.5s linear infinite 1.5s;
+  	}
+  	#minutes{
+  		background-color:  #5cff38;
+  	animation: anim 2.5s linear infinite 2.5s;
+  	}
+  	#seconds{
+  		background-color: #ff1433;
+  		animation: anim 2.5s linear infinite 3.5s;
+  	}
+  	@keyframes anim{
+  		0%{
+  			transform: scale(0.6);
+  		}
+  		50%{
+  			transform: scale(1.2);
+  		}
+  		100%{
+  			transform: scale(0.4);
+  		}
+  	}
+  </style>
+</head>
+<body>
+	<div class="container mt-5 text-center">
+			<p class="display-4">Sweetie Your Birthday is in</p>
+			<hr>
+		<div class="row">
+
+			<div class="col-md-3 col-xs-12 col-sm-6">
+				<div class="jumbotron text-center" id="days">
+					
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-6">
+				<div class="jumbotron text-center" id="hours">
+					
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-6">
+				<div class="jumbotron text-center" id="minutes">
+					
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-6">
+				<div class="jumbotron text-center" id="seconds">
+					
+				</div>
+			</div>
+			<div class="col-md-12 col-xs-6 mx-auto jumbotron bday">
+				<p class="display-4">Happy Birthday Baby..!!</p> <i class="fas fa-birthday-cake fa-4x"></i>
+			</div>
+		</div>	
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	const bday=new Date('15 Dec,2018 24:00').getTime();
+//	console.log(bday);
+	const intvl=setInterval(()=>{
+		const now=new Date().getTime();
+		const diff=bday-now;
+
+		if(diff>0)
+		{
+		const days=Math.floor(diff/(1000*60*60*24));
+		const hours=Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+		const minutes=Math.floor((diff % (1000*60*60)) / (1000*60));
+		const seconds=Math.floor((diff % (1000*60)) / (1000));
+
+		$('#days').html(days + `<hr> <p class="lead">Days</p><i class="fas fa-birthday-cake"></i>`);
+		$('#hours').html(hours + `<hr> <p class="lead">Hours</p><i class="fas fa-heart"></i>`);
+		$('#minutes').html(minutes + `<hr> <p class="lead">Minutes</p><i class="fas fa-grin-hearts"></i>`);
+		$('#seconds').html(seconds + `<hr> <p class="lead">Seconds</p><i class="fas fa-kiss-wink-heart"></i>`);
+		}
+		else{
+		$('#days').html(`<p class="lead">0 Days</p><i class="fas fa-birthday-cake"></i>`);
+		$('#hours').html(`<p class="lead">0 Hours</p><i class="fas fa-heart"></i>`);
+		$('#minutes').html( `<p class="lead">0 Minutes</p><i class="fas fa-grin-hearts"></i>`);
+		$('#seconds').html(`<p class="lead">0 Seconds</p><i class="fas fa-kiss-wink-heart"></i>`);
+		$(".bday").css('display','block');
+		 $("#days").css("animation-play-state", "paused");	
+		 $("#hours").css("animation-play-state", "paused");	
+		 $("#minutes").css("animation-play-state", "paused");	
+		 $("#seconds").css("animation-play-state", "paused");	
+
+
+		}
+	},1000);
+
+
+</script>
+</body>
+</html>

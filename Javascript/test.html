@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="1"></p>
+Male <input type="radio" name="gender" id="gender" value="male"/>
+			Female <input type="radio" name="gender" id="gender" value="female"/>
+			<br>
+			Cricket <input type="checkbox" name="check" id="cricket" value="cricket"/>
+			football <input type="checkbox" name="check" id="football" value="football"/>
+			hockey <input type="checkbox" name="check" id="football" value="hockey"/>
+			<br>
+			<input type="button" name="sub" value="submit" onclick="submitted()"/>
+			<br>
+			<p id="text1"></p><br>
+			<p id="text2"></p>
+<script type="text/javascript">
+	setInterval(()=>{document.getElementById("1").innerHTML=new Date();},1000);
+	var submitted=()=>{
+		var rds="You checked ";var ch="You checked ";
+		var radio=document.getElementsByName("gender");
+		var check=document.getElementsByName("check");
+
+		for(var i=0;i<radio.length;i++){
+			if(radio[i].checked){
+				rds=rds+radio[i].value;
+			}
+		for(var i=0;i<check.length;i++){
+			if(check[i].checked){
+				ch=ch+check[i].value+",";
+			}	
+		}
+		document.getElementById("text1").innerHTML=rds+ch;
+	}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FullPage</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	
+	<style type="text/css">
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	
+		body{
+			background-color: red;
+			color: white;
+		}
+		#fullpage{
+			text-align: center;
+			font-size: 50px;
+		}
+		#first{
+			background:url('img/abt.jpg');
+			background-attachment: fixed;
+			background-size: cover;
+
+		}
+		#second{
+			background:url('img/i3.jpg');
+			background-attachment: fixed;
+			background-size: cover;
+
+		}
+		#third{
+			background:url('img/abt.jpg') center center;
+			background-attachment: fixed;
+			background-size: cover;
+
+		}
+		#fourth{
+			background:url('img/abt.jpg') center center;
+			background-attachment: fixed;
+			background-size: cover;
+
+		}
+		
+		.navbar{
+			min-height: 80px;
+			background-color: #262626 !important;
+		}
+		.nav-link{
+			font-size: 1.3rem;
+		}
+		.navbar-brand{
+			font-size: 1.8rem;
+		}
+		.navbar-brand span{
+			color: #6a98e2;
+		}
+		.nav-link:hover{
+			color: #6a98e2 !important;
+			border-bottom: 1px solid white;
+			//transform: scale(1.15);
+			transition: .5s;
+		}
+
+
+		.owl-carousel{
+			width: 100%;
+			margin: auto;
+		}
+		.item img{
+			display: block;
+			cursor: pointer;
+			width: 100%;
+    		height: 85vh;
+		}
+		.display-4{
+			font-size: 2.3rem;
+		}
+
+		@media screen and (max-width:468px){
+		.item img{
+			display: block;
+			//justify-content: center;
+	    	width: 100%;
+    		height: 60vh;
+		}	
+				.display-4{
+			font-size: 1.8rem;
+		}		
+		} 
+	</style>
+</head>
+<body>
+	
+	<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Navigation dots</h1>
+			<p>An easy and beautiful way to navigate throw the sections</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Clickable</h1>
+				<p>
+					You can even click on the navigation and jump directly to another section.
+				</p>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2">
+			<h1>Slide 2</h1>
+		</div>
+
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="OwlCarousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		licenseKey:"OPEN-SOURCE-GPLV3-LICENSE",
+		autoScrolling:true,
+		lockAnchors:false,
+		navigationTooltips: ['first', 'second','third','fourth'],
+		//slidesNavPosition: 'bottom',
+		showActiveTooltip: true,
+		anchors:['first','second','third','fourth'],
+		navigation:true,
+		scrollHorizontally: true,
+
+		scrollingSpeed:1000
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(true);
+});
+
+</script>
+</body>
+</html>

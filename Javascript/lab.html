@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab</title>
+</head>
+<body>
+
+	Name: <input type="text" name="name" id="name"><br>
+	Mobile: <input type="number" name="mob" id="mob"><br>
+	DOB: <input type="date" name="date" id="dob"><br>
+	<button onclick="validate()">Submit</button>
+
+	<script type="text/javascript">
+		function validate(){
+			var name=document.getElementById("name").value;
+			var mob=document.getElementById("mob").value;
+			var dob=document.getElementById("dob").value;
+
+			var regAlpha=/[A-Za-z]/;
+			var regNum=/[0-9]{7}/;
+
+			if(regAlpha.test(name)){
+				document.write("true");
+			}
+
+			else{
+				document.write("false");
+			}
+			if(regNum.test(mob)){
+				document.write("true");
+			}
+
+			else{
+				document.write("false");
+			}
+			var d=new Date(dob);
+			document.write(d);
+		}
+	</script>
+</body>
+</html>
