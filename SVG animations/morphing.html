@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;  
+        }
+        #btn1,#btn2{
+            position: absolute;
+            left: 46%;
+            right: 0;
+            top: 40%;
+            background: cornflowerblue;
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+            width: 150px; 
+            cursor: pointer;   
+        }
+        #btn2{
+            position: relative;
+            left: 10%;
+        }
+        .container{
+            position: absolute;
+            left: 60%;
+            top: 20%;
+            opacity: 0;   
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Click Me</button>
+    <div class="container">
+        <h1>Welcome to the website</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet recusandae, dolore blanditiis dolor rem minima nihil earum et quisquam ducimus temporibus, nam cumque quia sint labore id itaque inventore!</p>
+        <button id="btn2">Go Back</button>
+    </div>
+    <svg viewbox="0,0,215,110" style="fill:cornflowerblue;">
+        <polygon class="polymorph" points="215,110 0,110 0,0 47.7,0 215,0"/>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script>
+        var btn1=document.querySelector('#btn1');
+        var btn2=document.querySelector('#btn2');
+
+        btn1.addEventListener('click',()=>{
+            anime({
+                targets: '.polymorph',
+                points: [
+                    { value: '215,110 0,110 0,0 47.7,0 67,0' },
+                    { value: '215,110 0,110 0,0 0,0 67,76' }
+                    ],
+                easing: 'easeOutQuad',
+                duration: 800,
+                loop: false
+                });
+
+            anime({
+                targets:'.container',
+                opacity:1,
+                translateY:50,
+                easing: 'easeOutQuad',
+                duration: 500,
+                loop: false
+            })
+
+            anime({
+                targets:'#btn1',
+                opacity:0,
+                easing: 'easeOutQuad',
+                duration: 500,
+                loop: false
+            })
+
+        })
+
+        btn2.addEventListener('click',()=>{
+            anime({
+                targets: '.polymorph',
+                points: [
+                    { value: '215,110 0,110 0,0 47.7,0 67,0' },
+                    { value: '215,110 0,110 0,0 47.7,0 215,0' }
+                    ],
+                easing: 'easeOutQuad',
+                duration: 800,
+                loop: false
+                });
+
+            anime({
+                targets:'.container',
+                opacity:0,
+                translateY:-350,
+                easing: 'easeOutQuad',
+                duration: 500,
+                loop: false
+            })
+
+            anime({
+                targets:'#btn1',
+                opacity:1,
+                easing: 'easeOutQuad',
+                duration: 500,
+                loop: false
+            })
+
+        })
+    </script>
+</body>
+</html>

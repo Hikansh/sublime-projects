@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.pageload{
+			position: fixed;
+			top: 0;left: 0;
+			background-color: #222;
+			height: 100vh;
+			width: 100%;
+			z-index: 2;
+			padding: 0;margin: 0;			
+			transition: all .3s ease;
+		}
+
+		.inner{
+			height: 95px;width: 50px;
+			position: absolute;
+			margin: auto;
+			top: 0;right: 0;left: 0;bottom: 0;
+		}
+		.inner > div{
+			background-color: rgba(255,255,255,0.7);
+			border-radius: 100%;
+			height: 50px;
+			width: 50px;
+            position: absolute;
+			transition: all .3s ease;
+		}
+		.inner>div:nth-child(1){
+			margin-left: -27px;
+			animation: one 1.5s linear 1;
+		}
+		.inner>div:nth-child(2){
+			margin-left: 27px;
+			animation: two 1.5s linear 1;
+		}
+		.inner>div:nth-child(3){
+			margin-left: -27px;
+			margin-top: 54px;
+			animation: three 1.5s linear 1;
+		}
+		.inner>div:nth-child(4){
+			margin-left: 27px;
+			margin-top: 54px;
+			animation: four 1.5s linear 1;
+		}
+		@keyframes one{
+			0%{
+				transform: scale(1);				
+			}
+			25%{
+				transform: scale(.3);				
+			}
+			50%{
+				transform: scale(1);				
+			}
+			75%{
+				transform: scale(1.4);				
+			}
+			100%{
+				transform: scale(1);				
+			}
+
+		}
+		@keyframes two{
+			0%{
+				transform: scale(1);				
+			}
+			25%{
+				transform: scale(.3);				
+			}
+			50%{
+				transform: scale(1);				
+			}
+			75%{
+				transform: scale(1.4);				
+			}
+			100%{
+				transform: scale(1);				
+			}
+
+		}
+		@keyframes three{
+			0%{
+				transform: scale(1);				
+			}
+			25%{
+				transform: scale(.3);				
+			}
+			50%{
+				transform: scale(1);				
+			}
+			75%{
+				transform: scale(1.4);				
+			}
+			100%{
+				transform: scale(1);				
+			}
+
+		}
+		@keyframes four{
+			0%{
+				transform: scale(1);				
+			}
+			25%{
+				transform: scale(.3);				
+			}
+			50%{
+				transform: scale(1);				
+			}
+			75%{
+				transform: scale(1.4);				
+			}
+			100%{
+				transform: scale(1);				
+			}
+
+		}
+		.pageload.off{
+			opacity: 0;
+			pointer-events: none;
+		}
+		.inner > div.done{
+			margin-left: 0;
+			margin-top: 27px;
+		}
+		.inner>div.page{
+			transform: scale(40);
+		}
+
+		section{
+			margin: 0;padding: 0;
+			width: 100%;
+			height: 100vh;
+			box-sizing: border-box;
+		}
+		.bg1{
+			background:url(images/comp1.jpg);
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+		.bg2{
+			background:url(images/comp2.jpg);
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+		.static{
+			height: auto;
+			padding: 20px;
+			border: 1px solid black;	
+				}
+
+.parra{
+	display: flex;
+	height: 100vh;
+	width: 100%;
+}
+				ul{
+					list-style-type: none;
+					display: grid;
+					grid-template-columns: repeat(3,auto);
+					justify-content: center;
+					align-items: middle;
+					place-items:center;
+					margin: auto;
+					letter-spacing: .5em;
+					font-weight: 3px;
+					font-size: 3rem;
+				}
+	</style>
+</head>
+<body>
+
+	<div class="pageload">
+		<div class="inner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+		<div class="parra">
+			<ul>
+				<li id="s1">Par</li>
+				<li>al</li>
+				<li id="s2">lax</li>
+			</ul>
+		</div>
+
+        <section class="section par bg1"></section>
+        <section class="section static">Hello</section>
+        <section class="section par bg2"></section>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+		setTimeout(()=>{
+			$('.inner div').addClass('done');
+				setTimeout(()=>{
+					$('.inner div').addClass('page');
+						setTimeout(()=>{
+							$('.pageload').addClass('off');
+							$('body,html').addClass('on');
+						},500)
+				},500)
+		},1500)
+
+		window.addEventListener('scroll',(e)=>{
+			//console.log('scroled')
+			var tar=document.getElementById('s1');
+			var tar2=document.getElementById('s2');
+
+			var scrolled=window.pageYOffset * -2;
+			var scrolled2=window.pageYOffset * 2;
+			console.log(scrolled2);
+
+			tar.style.transform='translate3d(0px,'+scrolled+'px,0px';
+		//	while(scrolled2<360){
+			tar2.style.transform='translate3d(0px,'+scrolled2+'px,0px';
+		
+		})
+
+	</script>
+</body>
+</html>
